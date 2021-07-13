@@ -18,6 +18,35 @@
           "sourceDir": "$env{HOME}/.vs/$ms{projectDirName}"
         }
       }
+    },
+    {
+      "name": "x64-Debug",
+      "inherits": "Linux-Debug",
+      "description": "Sets Ninja generator, debug build type, cl.exe, x64 arch",
+      "generator": "Ninja",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_C_COMPILER": "cl",
+        "CMAKE_CXX_COMPILER": "cl"
+      },
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      },
+      "vendor": {
+        "microsoft.com/VisualStudioSettings/CMake/1.0": {
+          "hostOS": "Windows"
+        }
+      }
+    },
+    {
+      "name": "x86-Debug",
+      "inherits": "x64-Debug",
+      "description": "Sets x86 arch",
+      "architecture": {
+        "value": "x86",
+        "strategy": "external"
+      }
     }
   ]
 }
